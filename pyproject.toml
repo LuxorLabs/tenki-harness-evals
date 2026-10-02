@@ -1,0 +1,34 @@
+[project]
+name = "tenki-harness-evals"
+version = "0.1.0"
+description = "Run one model across many coding-agent harnesses on Tenki, and see where it breaks"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "harbor>=0.23.0,<0.24",
+    "python-dotenv>=1.2.4",
+    "pyyaml>=6.0.3",
+    "tenki-harbor",
+]
+
+[tool.uv.sources]
+tenki-harbor = { git = "ssh://git@github.com/LuxorLabs/tenki-harbor.git", rev = "3cb846491e032629164a963dd38c459daa573688" }
+
+[project.scripts]
+evals = "harness_evals.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/harness_evals"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
