@@ -67,6 +67,29 @@ Every trial lands in one bucket:
 
 API errors are grouped by cause, with an example trial to open in `harbor view`.
 
+### Example
+
+`primalabs-ai/DeepSeek-V4-Flash-0731`, 6 harnesses × 10 Terminal-Bench 2.0 tasks,
+60 trials on Tenki in 57 minutes:
+
+| Harness | Pass rate | Passed | Failed | API errors | Timeouts |
+|---|---|---|---|---|---|
+| goose | 80% | 8 | 1 | 0 | 1 |
+| terminus-2 | 80% | 8 | 1 | 0 | 1 |
+| mini-swe-agent | 70% | 7 | 1 | 0 | 2 |
+| claude-code | 20% | 2 | 0 | 7 | 1 |
+| opencode | 0% | 0 | 0 | 10 | 0 |
+| qwen-coder | 0% | 0 | 0 | 10 | 0 |
+
+| Harness | Trials | API error |
+|---|---|---|
+| claude-code | 8 | malformed streaming response |
+| opencode | 10 | request rejected: Responses API `input` not accepted (`ResponseInput`) |
+| qwen-coder | 10 | request rejected: tool definition missing `parameters` |
+
+The model is capable (80% with three harnesses), but half the harnesses can't use
+it because of how the endpoint handles their requests.
+
 ## Harnesses
 
 ```bash
