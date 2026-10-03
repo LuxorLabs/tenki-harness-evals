@@ -17,6 +17,8 @@ OUTCOME_LABELS = {
     "harness_error": "Harness errors",
     "infra_error": "Infra errors",
 }
+# Errors from the sandbox layer itself (e.g. a dropped command stream), not the harness.
+_INFRA_EXCEPTIONS = {"SandboxError", "VerifierTimeoutError"}
 # Agent logs can be large; the errors that end a run are near the end.
 LOG_TAIL_BYTES = 400_000
 
@@ -91,7 +93,7 @@ def classify(trial_dir: Path) -> Trial:
         outcome = "api_error"
     elif exception_type == "AgentTimeoutError":
         outcome = "timeout"
-    elif exception_type == "VerifierTimeoutError":
+    elif exception_type in _INFRA_EXCEPTIONS:
         outcome = "infra_error"
     elif exception_type:
         outcome = "harness_error"

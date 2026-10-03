@@ -44,6 +44,7 @@ def make_trial(
         ({"exception": "NonZeroAgentExitCodeError", "message": "segfault"}, "harness_error"),
         ({"exception": "RuntimeError", "agent_ran": False}, "infra_error"),
         ({"exception": "VerifierTimeoutError", "reward": None}, "infra_error"),
+        ({"exception": "SandboxError", "message": "Stream removed (RST_STREAM)"}, "infra_error"),
         (
             {
                 "exception": "UnknownApiError",
