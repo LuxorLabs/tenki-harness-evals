@@ -3,7 +3,7 @@ from harbor.models.job.config import JobConfig
 
 from harness_evals.config import RunSpec, build_job_config
 
-MODEL = "primalabs-ai/DeepSeek-V4-Flash-0731"
+MODEL = "example-org/coder-model"
 
 
 def test_config_is_a_valid_harbor_job():

@@ -28,7 +28,7 @@ every trial. It's optional.
 
 ```bash
 uv run evals models                                        # what your endpoint serves
-uv run evals run --model primalabs-ai/DeepSeek-V4-Flash-0731
+uv run evals run --model example-org/coder-model
 ```
 
 That runs the default harnesses on the first 10 Terminal-Bench 2.0 tasks, 16 trials
@@ -69,8 +69,8 @@ API errors are grouped by cause, with an example trial to open in `harbor view`.
 
 ### Example
 
-`primalabs-ai/DeepSeek-V4-Flash-0731`, 6 harnesses × 10 Terminal-Bench 2.0 tasks,
-60 trials on Tenki in 57 minutes:
+One model behind an OpenAI-compatible endpoint, 6 harnesses × 10 Terminal-Bench 2.0
+tasks, 60 trials on Tenki in 57 minutes:
 
 | Harness | Pass rate | Passed | Failed | API errors | Timeouts |
 |---|---|---|---|---|---|
