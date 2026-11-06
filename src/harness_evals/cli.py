@@ -24,10 +24,13 @@ REQUIRED_ENV = {
 
 
 def _missing_env(harnesses: list[str]) -> list[str]:
-    needed = ["TENKI_API_KEY"]
+    needed = []
     for name in harnesses:
         needed += REQUIRED_ENV[HARNESSES[name].protocol]
-    return [var for var in dict.fromkeys(needed) if not os.environ.get(var)]
+    missing = [var for var in dict.fromkeys(needed) if not os.environ.get(var)]
+    if not (os.environ.get("LUXORAI_API_KEY") or os.environ.get("TENKI_API_KEY")):
+        missing.insert(0, "TENKI_API_KEY")
+    return missing
 
 
 def _write_report(job_dir: Path) -> str:
