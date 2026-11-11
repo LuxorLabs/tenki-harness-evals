@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-tenki-harbor = { git = "https://github.com/LuxorLabs/tenki-harbor.git", rev = "b2d703898cc90918eb20ea134bd8619049d8d80d" }
+tenki-harbor = { git = "https://github.com/LuxorLabs/tenki-harbor.git", rev = "96905796c1f489be9d10412c1ae5c6f9f539cb62" }
 
 [project.scripts]
 evals = "harness_evals.cli:main"

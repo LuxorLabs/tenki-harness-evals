@@ -2190,16 +2190,16 @@ wheels = [
 
 [[package]]
 name = "tenki"
-version = "1.4.1"
+version = "1.4.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "grpcio" },
     { name = "protobuf" },
     { name = "websocket-client" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3c/59/93036224f9c175af8d7653e618f385ded93f873da5b727755f519ca5b75c/tenki-1.4.1.tar.gz", hash = "sha256:ff361ce1ef7b1676ce8fea519aa63cbce8cb1c1d98fc989d1fde1ff6ef8a79ae", size = 290340, upload-time = "2026-10-01T15:26:19.115Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f2/f6/b98e927c13fa7537eef5c6ea4beb28d82ef038b132894c542d086282c700/tenki-1.4.4.tar.gz", hash = "sha256:157eb7664c426d9cab6b918a8df4c359b009271af7873e8fec098f7e38ebeb3d", size = 361266, upload-time = "2026-11-10T13:27:03.783Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/4c/00/f5c5d6b8f75acf6cc2e25128e9418eddadf63571497b6b04e524d5ac09c8/tenki-1.4.1-py3-none-any.whl", hash = "sha256:c48352be3d1c514c7e47aa5264e55723675510ce4a20a025a2dedb1d83dcfada", size = 199117, upload-time = "2026-10-01T15:26:17.517Z" },
+    { url = "https://files.pythonhosted.org/packages/5f/cb/241a31fd52a6541f9438107155e8555ffc502335f2db3a9ba69fae80b048/tenki-1.4.4-py3-none-any.whl", hash = "sha256:a34d72eba445d6d0b54d6d10f5a29a4b5dd189cfbd8b89dfc436f3dbe2350b47", size = 237507, upload-time = "2026-11-10T13:27:01.282Z" },
 ]
 
 [package.optional-dependencies]
@@ -2210,7 +2210,7 @@ async = [
 [[package]]
 name = "tenki-harbor"
 version = "0.1.0"
-source = { git = "https://github.com/LuxorLabs/tenki-harbor.git?rev=b2d703898cc90918eb20ea134bd8619049d8d80d#b2d703898cc90918eb20ea134bd8619049d8d80d" }
+source = { git = "https://github.com/LuxorLabs/tenki-harbor.git?rev=96905796c1f489be9d10412c1ae5c6f9f539cb62#96905796c1f489be9d10412c1ae5c6f9f539cb62" }
 dependencies = [
     { name = "harbor" },
     { name = "tenki", extra = ["async"] },
@@ -2238,7 +2238,7 @@ requires-dist = [
     { name = "harbor", specifier = ">=0.23.0,<0.24" },
     { name = "python-dotenv", specifier = ">=1.2.4" },
     { name = "pyyaml", specifier = ">=6.0.3" },
-    { name = "tenki-harbor", git = "https://github.com/LuxorLabs/tenki-harbor.git?rev=b2d703898cc90918eb20ea134bd8619049d8d80d" },
+    { name = "tenki-harbor", git = "https://github.com/LuxorLabs/tenki-harbor.git?rev=96905796c1f489be9d10412c1ae5c6f9f539cb62" },
 ]
 
 [package.metadata.requires-dev]
